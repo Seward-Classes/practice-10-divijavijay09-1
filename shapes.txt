@@ -1,0 +1,9 @@
+// Author: Divija Vijay
+// Date: 04/14/2026
+
+// AI Disclaimer: This code was written with no AI assistance.
+
+rectangle 10 4
+circle 3
+rectangle 2 8
+circle 5

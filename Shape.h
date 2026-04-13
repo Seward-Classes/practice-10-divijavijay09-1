@@ -5,14 +5,26 @@
 // Used AI for: code structure suggestions and algorithm guidance.
 // I implemented the solutions and modified the AI suggestions to fit the requirements.
 
+#ifndef SHAPE_H
+#define SHAPE_H
+
 #include <iostream>
-#include <fstream>
-#include <vector>
 #include <string>
-#include "Shape.h"
-#include "Shape.cpp" 
 
-int main() {
+
+class Rectangle
+{
+    double width;
+    double height;
+
+    // double getArea(double width, double height) {return width * height}
     
-}
+    void display(){}
+};
 
+// virtual double getArea() const = 0;
+// virtual void display() const;
+// virtual ~Shape() = default;
+
+
+#endif
