@@ -11,20 +11,44 @@
 #include <iostream>
 #include <string>
 
+class Shape {
+public:
+    virtual double getArea() const = 0;
+    
+    virtual void display() const {
+        std::cout << "Base Shape";
+    }
 
-class Rectangle
-{
+    virtual ~Shape() = default;
+};
+
+class Rectangle : public Shape {
+private:
     double width;
     double height;
 
-    // double getArea(double width, double height) {return width * height}
-    
-    void display(){}
+public:
+    Rectangle(double w, double h) : width(w), height(h) {}
+    double getArea() const override { return width * height; }
+    void display() const override {
+        std::cout << "Rectangle (" << width << " x " << height << ")";
+    }
 };
 
-// virtual double getArea() const = 0;
-// virtual void display() const;
-// virtual ~Shape() = default;
+class Circle : public Shape {
+private:
+    double radius;
 
+public:
+    Circle(double r) : radius(r) {}
+    double getArea() const override { 
+        return 3.14159265358979323846 * radius * radius; 
+    }
+    void display() const override {
+        std::cout << "Circle (radius: " << radius << ")";
+    }
+};
 
 #endif
+
+
